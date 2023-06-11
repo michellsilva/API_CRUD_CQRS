@@ -1,9 +1,4 @@
 ﻿using AvaliacaoFC.Nucleo.Dominio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AvaliacaoFC.Nucleo.Infra.Repositorios
 {
@@ -13,19 +8,40 @@ namespace AvaliacaoFC.Nucleo.Infra.Repositorios
         {
         }
 
+        public void AtualizarDados(Usuario usuario)
+        {
+            Atualizar(usuario);
+            Contexto.SaveChanges();
+        }
+
+        public void AtualizarLista(IEnumerable<Usuario> usuarios)
+        {
+            Atualizar(usuarios);
+            Contexto.SaveChanges();
+        }
+
         public void Casdastrar(Usuario usuario)
         {
-            Inserir<Usuario>(usuario);
+            Inserir(usuario);
+            Contexto.SaveChanges();
         }
 
         public IEnumerable<Usuario> ListarTodos()
         {
-            return Contexto.Usuarios.ToList();
+            return Contexto.Usuarios.OrderBy(x => x.Id).ToList();
         }
 
         public Usuario? ObterPorId(long id)
         {
             return Obter<Usuario>(x => x.Id == id);
+        }
+
+        public bool UsuarioJaCadastrado(Usuario usuario)
+        {
+            return Listar<Usuario>(x =>
+                    x.Cpf.Equals(usuario.Cpf) ||
+                    x.Login.Equals(usuario.Login) ||
+                    x.Email.Equals(usuario.Email)).Any();
         }
     }
 }

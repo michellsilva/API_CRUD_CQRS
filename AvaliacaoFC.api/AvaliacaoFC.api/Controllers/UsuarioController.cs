@@ -1,11 +1,10 @@
 ﻿using AvaliacaoFC.Nucleo.Aplicacao;
+using AvaliacaoFC.Nucleo.Aplicacao.AtualizarUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios;
 using AvaliacaoFC.Nucleo.Dominio;
-using AvaliacaoFC.Nucleo.Infra.Repositorios;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace AvaliacaoFC.Api.Controllers
 {
@@ -22,7 +21,7 @@ namespace AvaliacaoFC.Api.Controllers
         }   
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(Usuario))]
+        [ProducesResponseType(200, Type = typeof(RespostaListarUsuarios))]
         public async Task<IActionResult> GetAsync()
         {
             try
@@ -47,8 +46,33 @@ namespace AvaliacaoFC.Api.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(200, Type = typeof(Usuario))]
+        [ProducesResponseType(200, Type = typeof(RespostaCadastrarUsuario))]
         public async Task<IActionResult> Post([FromBody] ComandoCadastrarUsuario comando)
+        {
+            try
+            {
+                var resposta = await _mediador.Send(comando);
+
+                if (resposta.Sucesso)
+                {
+                    return Ok(resposta);
+                }
+                else
+                {
+                    return BadRequest(resposta);
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Ocorreu um erro não conhecido.");
+
+                return StatusCode(500, new RespostaBase(false, "Ocorreu um erro não conhecido."));
+            }
+        }
+
+        [HttpPut]
+        [ProducesResponseType(200, Type = typeof(RespostaAtualizarUsuario))]
+        public async Task<IActionResult> Put([FromBody] ComandoAtualizarUsuario comando)
         {
             try
             {

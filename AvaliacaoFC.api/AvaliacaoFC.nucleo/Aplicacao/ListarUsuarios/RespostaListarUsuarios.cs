@@ -19,6 +19,7 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
                 {
                     resposta.Usuarios.Add(new()
                     {
+                        Id = item.Id,
                         Nome = item.Nome,
                         Login = item.Login,
                         Email = item.Email,
@@ -35,7 +36,7 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
         }
         public class RespostaUsuario
         {
-
+            public long Id { get; set; }
             public string Nome { get; init; }
             public string Login { get; init; }
             public string Email { get; init; }

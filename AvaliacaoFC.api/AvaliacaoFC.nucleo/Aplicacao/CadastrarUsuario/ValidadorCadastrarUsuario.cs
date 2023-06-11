@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -16,15 +17,13 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
                 .Cascade(CascadeMode.Stop)
                 .NotNull().WithMessage("O 'Nome de usuário' deve ser informado.")
                 .NotEmpty().WithMessage("O 'Nome de usuário' deve ser informado.")
-                .MinimumLength(5).WithMessage("O 'Nome de usuário' deve conter no mínimo 5 caracteres.")
-                .MaximumLength(150).WithMessage("O 'Nome de usuário' ultrapassou o limite máximo de caracteres.");
+                .Length(5, 150).WithMessage("O 'Nome de usuário' deve ter no mínimo 5 caracteres e no máximo 150 caracteres.");
 
             RuleFor(x => x.Login)
                .Cascade(CascadeMode.Stop)
                .NotNull().WithMessage("O 'Login' deve ser informado.")
                .NotEmpty().WithMessage("O 'Login' deve ser informado.")
-               .MinimumLength(5).WithMessage("O 'Login' deve conter no mínimo 5 caracteres.")
-               .MaximumLength(30).WithMessage("O 'Login' ultrapassou o limite máximo de caracteres.");
+               .Length(5, 20).WithMessage("O 'Login' deve ter no mínimo 5 caracteres e no máximo 20 caracteres.");
 
             RuleFor(x => x.Email)
                .Cascade(CascadeMode.Stop)
@@ -33,12 +32,13 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
                .MaximumLength(150).WithMessage("O 'E-mail' ultrapassou o limite máximo de caracteres.")
                .EmailAddress().WithMessage("O 'E-mail' no formato inválido.");
 
-            RuleFor(x => x.Senha)
+            RuleFor(x => x.Senha!)
               .Cascade(CascadeMode.Stop)
-              .NotNull().WithMessage("A 'Senha' deve ser informado.")
-              .NotEmpty().WithMessage("A 'Senha' deve ser informado.")
-              .MinimumLength(8).WithMessage("A 'Senha' deve conter no mínimo 5 caracteres.")
-              .MaximumLength(20).WithMessage("A 'Senha' ultrapassou o limite máximo de caracteres.");
+              .NotNull().WithMessage("A 'Senha' deve ser informada.")
+              .NotEmpty().WithMessage("A 'Senha' deve ser informada.")
+              .Must(value =>
+                Regex.IsMatch(value, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,20}$"))
+              .WithMessage("A 'Senha' deve conter (letra maiúscula, letra minúscula, número, caracater especial) enrte 8 a 20 caracteres.");
 
             RuleFor(x => x.Telefone)
               .Cascade(CascadeMode.Stop)
@@ -52,8 +52,8 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
 
             RuleFor(x => x.DataNascimento)
              .Cascade(CascadeMode.Stop)
-             .NotNull().WithMessage("A 'Data de Nascimento' deve ser informado.")
-             .NotEmpty().WithMessage("A 'Data de Nascimento' deve ser informado.");
+             .NotNull().WithMessage("A 'Data de Nascimento' deve ser informada.")
+             .NotEmpty().WithMessage("A 'Data de Nascimento' deve ser informada.");
 
             RuleFor(x => x.NomeMae)
             .Cascade(CascadeMode.Stop)

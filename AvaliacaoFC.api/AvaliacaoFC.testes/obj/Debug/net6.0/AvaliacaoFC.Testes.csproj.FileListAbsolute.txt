@@ -236,3 +236,4 @@ C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.testes
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.testes\obj\Debug\net6.0\ref\AvaliacaoFC.Testes.dll
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.testes\bin\Debug\net6.0\MediatR.dll
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.testes\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.testes\bin\Debug\net6.0\FluentValidation.dll

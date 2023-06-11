@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AvaliacaoFC.Nucleo.Infra.Repositorios
+﻿namespace AvaliacaoFC.Nucleo.Infra.Repositorios
 {
     public interface IRepositorioBase
     {

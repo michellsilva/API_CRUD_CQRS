@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AvaliacaoFC.Nucleo.Dominio
+﻿namespace AvaliacaoFC.Nucleo.Dominio
 {
     public class Usuario : Entidade<int>
     {
@@ -22,23 +16,54 @@ namespace AvaliacaoFC.Nucleo.Dominio
             DataInclusao = DateTime.Now;
         }
 
-        public string Nome { get; init; }
-        public string Login { get; init; }
-        public string Senha { get; init; }
-        public string Email { get; init; }
-        public string Telefone { get; init; }
-        public string Cpf { get; init; }
-        public DateTime DataNascimento { get; init; }
-        public string NomeMae { get; init; }
-        public Situacao Status { get; init; }
-        public DateTime DataInclusao { get; init; }
-        public DateTime? DataAlteracao { get; init; }
+        public string Nome { get; private set; }
+        public string Login { get; private set; }
+        public string Senha { get; private set; }
+        public string Email { get; private set; }
+        public string Telefone { get; private set; }
+        public string Cpf { get; private set; }
+        public DateTime DataNascimento { get; private set; }
+        public string NomeMae { get; private set; }
+        public Situacao Status { get; private set; }
+        public DateTime DataInclusao { get; private set; }
+        public DateTime? DataAlteracao { get; private set; }
 
         public enum Situacao
         {
-            INATIVADO,
+            INATIVO,
             ATIVO,
             BLOQUEADO
+        }
+
+        public void AtualizarDados(string nome, string login, string email, string telefone, string cpf, DateTime dataNascimento, string nomeMae, Situacao status)
+        {
+            Nome = nome;
+            Login = login;
+            Email = email;
+            Telefone = telefone;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            NomeMae = nomeMae;
+            Status = status;
+            DataAlteracao = DateTime.Now;
+        }
+
+        public void Inativar()
+        {
+            Status = Situacao.INATIVO;
+            DataAlteracao = DateTime.Now;
+        }
+
+        public void Bloquear()
+        {
+            Status = Situacao.BLOQUEADO;
+            DataAlteracao = DateTime.Now;
+        }
+
+        public void Ativar()
+        {
+            Status = Situacao.ATIVO;
+            DataAlteracao = DateTime.Now;
         }
     }
 }

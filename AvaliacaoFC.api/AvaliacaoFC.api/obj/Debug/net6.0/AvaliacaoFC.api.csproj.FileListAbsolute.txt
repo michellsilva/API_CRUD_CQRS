@@ -100,7 +100,6 @@ C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\ob
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.AssemblyInfoInputs.cache
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.AssemblyInfo.cs
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.csproj.CoreCompileInputs.cache
-C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\staticwebassets\msbuild.AvaliacaoFC.Api.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\staticwebassets\msbuild.build.AvaliacaoFC.Api.props

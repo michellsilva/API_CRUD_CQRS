@@ -5,7 +5,7 @@ using MediatR;
 using AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios;
 using AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario;
 using FluentValidation;
-using AvaliacaoFC.Nucleo.Aplicacao;
+using AvaliacaoFC.Nucleo.Aplicacao.AtualizarUsuario;
 
 namespace AvaliacaoFC.Nucleo
 {
@@ -19,7 +19,9 @@ namespace AvaliacaoFC.Nucleo
 
             servicos.AddTransient<IValidator<ComandoCadastrarUsuario>, ValidadorCadastrarUsuario>();
             servicos.AddTransient<IRequestHandler<ComandoCadastrarUsuario, RespostaCadastrarUsuario>, ExecutorCadastrarUsuario>();
-            
+
+            servicos.AddTransient<IValidator<ComandoAtualizarUsuario>, ValidadorAtualizarUsuario>();
+            servicos.AddTransient<IRequestHandler<ComandoAtualizarUsuario, RespostaAtualizarUsuario>, ExecutorAtualizarUsuario>();
 
 
             return servicos;

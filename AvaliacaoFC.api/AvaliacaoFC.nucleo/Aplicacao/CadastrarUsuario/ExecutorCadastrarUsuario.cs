@@ -30,15 +30,20 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
             }
 
             var usuario = new Usuario(
-                    comando.Nome!,
-                    comando.Login!,
-                    comando.Senha!,
-                    comando.Email!,
-                    comando.Telefone!,
-                    comando.Telefone!,
-                    comando.DataNascimento,
-                    comando.NomeMae!
-                );
+                comando.Nome!,
+                comando.Login!,
+                comando.Senha!,
+                comando.Email!,
+                comando.Telefone!,
+                comando.Cpf!,
+                comando.DataNascimento,
+                comando.NomeMae!
+            );
+
+            if (_repositorioUsuario.UsuarioJaCadastrado(usuario))
+            {
+                return Task.FromResult(RespostaCadastrarUsuario.Invalido("Usuário já cadastro no sistema."));
+            }
 
             _repositorioUsuario.Casdastrar(usuario);
 

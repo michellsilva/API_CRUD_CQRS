@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Jvv7OnVg2N8BRQxp6CJ3FvFEDGDuf5LIoN+Y1r9ylIEp22aObUCd+XLYbuh3YWapi8df3Rvc8jFunq/gh4aHrw==",
+  "dgSpecHash": "W5cejV6Epctj4QVQx0qxeDFi0P9+Jy3rfSk6MclXVOwusmoAx2+7uV4TZxozGiJRuFHl4pIbWYcxt5Hn6H1oCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mjosep\\Documents\\Michel\\avaliacao_CRUD\\AvaliacaoFC.api\\AvaliacaoFC.nucleo\\AvaliacaoFC.Nucleo.csproj",
+  "projectFilePath": "C:\\Users\\mjosep\\Documents\\Michel\\Avaliacao_FC\\AvaliacaoFC.api\\AvaliacaoFC.nucleo\\AvaliacaoFC.Nucleo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mjosep\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\mjosep\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\mjosep\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\mjosep\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\mjosep\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\mjosep\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\mjosep\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",

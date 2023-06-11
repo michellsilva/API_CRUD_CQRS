@@ -12,3 +12,17 @@ C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucl
 C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\ref\AvaliacaoFC.nucleo.dll
 C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.nucleo.runtimeconfig.json
 C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.genruntimeconfig.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.Nucleo.deps.json
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.Nucleo.runtimeconfig.json
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.Nucleo.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.Nucleo.pdb
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.csproj.AssemblyReference.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.AssemblyInfoInputs.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.AssemblyInfo.cs
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.csproj.CoreCompileInputs.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\refint\AvaliacaoFC.Nucleo.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.pdb
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.genruntimeconfig.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\ref\AvaliacaoFC.Nucleo.dll

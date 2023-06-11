@@ -8,7 +8,7 @@ namespace AvaliacaoFC.Nucleo.Dominio
 {
     public class Usuario : Entidade<int>
     {
-        public Usuario(string nome, string login, string senha, string email, string telefone, int cpf, DateTime dataNascimento, string nomeMae)
+        public Usuario(string nome, string login, string senha, string email, string telefone, string cpf, DateTime dataNascimento, string nomeMae)
         {
             Nome = nome;
             Login = login;
@@ -27,12 +27,12 @@ namespace AvaliacaoFC.Nucleo.Dominio
         public string Senha { get; init; }
         public string Email { get; init; }
         public string Telefone { get; init; }
-        public int Cpf { get; init; }
+        public string Cpf { get; init; }
         public DateTime DataNascimento { get; init; }
         public string NomeMae { get; init; }
-        public Situacao Status { get; }
-        public DateTime DataInclusao { get; }
-        public DateTime? DataAlteracao { get; }
+        public Situacao Status { get; init; }
+        public DateTime DataInclusao { get; init; }
+        public DateTime? DataAlteracao { get; init; }
 
         public enum Situacao
         {

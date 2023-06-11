@@ -1,6 +1,7 @@
 using AvaliacaoFC.Nucleo;
 using AvaliacaoFC.Nucleo.Infra.Repositorios;
 using Microsoft.EntityFrameworkCore;
+using System.Net.NetworkInformation;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Contexto>(
@@ -12,6 +13,9 @@ builder.Services.AdicionarNucleo(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(cfg =>
+     cfg.RegisterServicesFromAssembly(typeof(Ping).Assembly));
 
 
 var app = builder.Build();

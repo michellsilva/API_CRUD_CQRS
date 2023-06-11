@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AvaliacaoFC.Nucleo
-build_property.ProjectDir = C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\
+build_property.ProjectDir = C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\

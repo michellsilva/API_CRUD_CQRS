@@ -1,12 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Extensions.Configuration;
-using System.Threading.Tasks;
 using AvaliacaoFC.Nucleo.Infra.Repositorios;
-using Microsoft.EntityFrameworkCore;
+using MediatR;
+using AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios;
+using AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario;
+using FluentValidation;
+using AvaliacaoFC.Nucleo.Aplicacao;
 
 namespace AvaliacaoFC.Nucleo
 {
@@ -14,8 +13,14 @@ namespace AvaliacaoFC.Nucleo
     {
         public static IServiceCollection AdicionarNucleo(this IServiceCollection servicos, IConfigurationRoot configuracoes)
         {
-            servicos
-                .AddScoped<IRepositorioUsuario, RepositorioUsuario>();
+            servicos.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
+
+            servicos.AddTransient<IRequestHandler<ConsultaListarUsuarios, RespostaListarUsuarios>, ExecutorListarUsuarios>();
+
+            servicos.AddTransient<IValidator<ComandoCadastrarUsuario>, ValidadorCadastrarUsuario>();
+            servicos.AddTransient<IRequestHandler<ComandoCadastrarUsuario, RespostaCadastrarUsuario>, ExecutorCadastrarUsuario>();
+            
+
 
             return servicos;
         }

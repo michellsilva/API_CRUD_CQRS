@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AvaliacaoFC.Nucleo.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,21 @@ namespace AvaliacaoFC.Nucleo.Infra.Repositorios
     {
         public RepositorioUsuario(Contexto contexto) : base(contexto)
         {
+        }
+
+        public void Casdastrar(Usuario usuario)
+        {
+            Inserir<Usuario>(usuario);
+        }
+
+        public IEnumerable<Usuario> ListarTodos()
+        {
+            return Contexto.Usuarios.ToList();
+        }
+
+        public Usuario? ObterPorId(long id)
+        {
+            return Obter<Usuario>(x => x.Id == id);
         }
     }
 }

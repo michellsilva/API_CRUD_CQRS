@@ -1,0 +1,14 @@
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.nucleo.deps.json
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.nucleo.dll
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.nucleo.pdb
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.csproj.AssemblyReference.cache
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.AssemblyInfoInputs.cache
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.AssemblyInfo.cs
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.csproj.CoreCompileInputs.cache
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.dll
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\refint\AvaliacaoFC.nucleo.dll
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.pdb
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\ref\AvaliacaoFC.nucleo.dll
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\bin\Debug\net6.0\AvaliacaoFC.nucleo.runtimeconfig.json
+C:\Users\mjosep\Documents\Michel\avaliacao_CRUD\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.nucleo.genruntimeconfig.cache

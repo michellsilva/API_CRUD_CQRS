@@ -13,6 +13,7 @@ using AvaliacaoFC.Nucleo.Aplicacao.BloquearsUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.InativarTodosUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.AcessarSistema;
 using AvaliacaoFC.Nucleo.Aplicacao.RecuperarSenhaUsuario;
+using AvaliacaoFC.Nucleo.Infra.Servicos;
 
 namespace AvaliacaoFC.Nucleo
 {
@@ -47,6 +48,13 @@ namespace AvaliacaoFC.Nucleo
 
             servicos.AddTransient<IValidator<ComandoRecuperarSenhaUsuario>, ValidadorRecuperarSenhaUsuario>();
             servicos.AddTransient<IRequestHandler<ComandoRecuperarSenhaUsuario, RespostaRecuperarSenhaUsuario>, ExecutorRecuperarSenhaUsuario>();
+
+            servicos.AddScoped<IGeradorEmail>(_ => new GeradorEmail(
+                configuracoes.GetValue<string>("configuracaoEmail:Provedor"),
+                configuracoes.GetValue<int>("configuracaoEmail:Porta"),
+                configuracoes.GetValue<string>("configuracaoEmail:EmailRemetente"),
+                configuracoes.GetValue<string>("configuracaoEmail:NomeUsuario"),
+                configuracoes.GetValue<string>("configuracaoEmail:Senha")));
 
             return servicos;
         }

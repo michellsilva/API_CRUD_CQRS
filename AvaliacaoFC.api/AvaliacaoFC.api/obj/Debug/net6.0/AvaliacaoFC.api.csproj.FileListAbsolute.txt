@@ -116,3 +116,4 @@ C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\ob
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.genruntimeconfig.cache
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\ref\AvaliacaoFC.Api.dll
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.api\obj\Debug\net6.0\AvaliacaoFC.Api.MvcApplicationPartsAssemblyInfo.cs

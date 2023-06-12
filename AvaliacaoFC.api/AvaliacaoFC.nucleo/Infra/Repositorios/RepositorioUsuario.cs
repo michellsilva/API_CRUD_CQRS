@@ -40,21 +40,21 @@ namespace AvaliacaoFC.Nucleo.Infra.Repositorios
         public Usuario? ObterPorLoginESenha(string login, string senha)
         {
             return Obter<Usuario>(x =>
-                x.Login.Equals(login, StringComparison.OrdinalIgnoreCase) &&
-                x.Senha.Equals(senha, StringComparison.OrdinalIgnoreCase));
+                x.Login.Trim().ToLower() == login.Trim().ToLower() &&
+                x.Senha == senha);
         }
 
         public bool UsuarioJaCadastrado(Usuario usuario)
         {
             return Listar<Usuario>(x =>
                     x.Cpf.Equals(usuario.Cpf) ||
-                    x.Login.Equals(usuario.Login, StringComparison.OrdinalIgnoreCase) ||
-                    x.Email.Equals(usuario.Email, StringComparison.OrdinalIgnoreCase)).Any();
+                    x.Login.Trim().ToLower() == usuario.Login.Trim().ToLower() ||
+                    x.Email.Trim().ToLower() == usuario.Email.Trim().ToLower()).Any();
         }
 
         public Usuario? ObterPorEmail(string email)
         {
-            return Obter<Usuario>(x => x.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+            return Obter<Usuario>(x => x.Email.Trim().ToLower() == email.Trim().ToLower());
         }
 
         public IEnumerable<Usuario> Consultar(Expression<Func<Usuario, bool>> predicate)

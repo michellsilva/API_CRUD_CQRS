@@ -61,5 +61,20 @@ namespace AvaliacaoFC.Nucleo.Infra.Repositorios
         {
             return Listar(predicate).ToList();
         }
+
+        public IEnumerable<Usuario> FiltrarComPaginacao(Expression<Func<Usuario, bool>> predicate, int pagInicial, int pagFinal)
+        {
+            var usuarios = Listar(predicate)
+                .Skip(pagInicial)
+                .Take(pagFinal)
+                .ToList();
+
+            return usuarios;
+        }
+
+        public int ObterTotalRegistros(Expression<Func<Usuario, bool>> predicate)
+        {
+            return Listar(predicate).Count();
+        }
     }
 }

@@ -15,5 +15,7 @@ namespace AvaliacaoFC.Nucleo.Infra.Repositorios
         Usuario? ObterPorLoginESenha(string login, string senha);
         Usuario? ObterPorEmail(string email);
         IEnumerable<Usuario> Consultar(Expression<Func<Usuario, bool>> predicate);
+        IEnumerable<Usuario> FiltrarComPaginacao(Expression<Func<Usuario, bool>> predicate, int pagInicial, int pagFinal);
+        int ObterTotalRegistros(Expression<Func<Usuario, bool>> predicate);
     }
 }

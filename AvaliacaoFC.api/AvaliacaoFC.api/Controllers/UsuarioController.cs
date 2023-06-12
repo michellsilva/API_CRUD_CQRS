@@ -26,11 +26,11 @@ namespace AvaliacaoFC.Api.Controllers
 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(RespostaListarUsuarios))]
-        public async Task<IActionResult> GetAsync()
+        public async Task<IActionResult> Get([FromQuery] ConsultaListarUsuarios consulta)
         {
             try
             {
-                var resposta = await _mediador.Send(new ConsultaListarUsuarios());
+                var resposta = await _mediador.Send(consulta);
 
                 if (resposta.Sucesso)
                 {

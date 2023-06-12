@@ -5,13 +5,15 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
     public class RespostaListarUsuarios : RespostaBase
     {
         public List<RespostaUsuario> Usuarios { get; set; } = new();
+        public int TotalRegistros { get; set; }
 
         public RespostaListarUsuarios(bool sucesso, string mensagem) : base(sucesso, mensagem)
         {
         }
-        internal static RespostaListarUsuarios Sucesso(IEnumerable<Usuario> usuarios)
+        internal static RespostaListarUsuarios Sucesso(IEnumerable<Usuario> usuarios, int totalPaginas)
         {
             RespostaListarUsuarios resposta = new(true, string.Empty);
+            resposta.TotalRegistros = totalPaginas;
 
             if (usuarios != null)
             {

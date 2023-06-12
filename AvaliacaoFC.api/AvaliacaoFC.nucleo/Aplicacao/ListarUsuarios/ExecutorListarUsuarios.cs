@@ -19,6 +19,8 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
         {
             var usuarios = _repositorioUsuario.ListarTodos();
 
+            _logger.LogInformation("Usuários listados com sucesso!");
+
             return Task.FromResult(RespostaListarUsuarios.Sucesso(usuarios));
         }
     }

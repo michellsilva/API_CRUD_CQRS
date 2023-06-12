@@ -22,7 +22,7 @@ namespace AvaliacaoFC.Api.Controllers
         {
             _log = log;
             _mediador = mediador;
-        }   
+        }
 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(RespostaListarUsuarios))]

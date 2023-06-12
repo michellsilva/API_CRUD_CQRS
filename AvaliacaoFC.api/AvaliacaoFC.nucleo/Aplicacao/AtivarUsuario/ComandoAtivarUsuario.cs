@@ -5,7 +5,7 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.AtivarUsuario
 {
     public class ComandoAtivarUsuario : IRequest<RespostaAtivarUsuario>
     {
-        public long? Id { get; set; }
+        public long? Id { get; init; }
 
         public ValidationResult Validar()
         {

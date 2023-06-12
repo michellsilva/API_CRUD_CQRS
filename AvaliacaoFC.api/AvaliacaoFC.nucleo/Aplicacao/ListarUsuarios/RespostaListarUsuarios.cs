@@ -27,16 +27,18 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
                         Cpf = item.Cpf,
                         DataNascimento = item.DataNascimento,
                         NomeMae = item.NomeMae,
-                        Status = (long)item.Status
+                        Status = (long)item.Status,
+                        DataInclusao = item.DataInclusao,
+                        DataAlteracao = item.DataAlteracao
                     });
-                }
+                };
             }
 
             return resposta;
         }
         public class RespostaUsuario
         {
-            public long Id { get; set; }
+            public long Id { get; init; }
             public string Nome { get; init; }
             public string Login { get; init; }
             public string Email { get; init; }
@@ -45,6 +47,8 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios
             public DateTime DataNascimento { get; init; }
             public string NomeMae { get; init; }
             public long Status { get; init; }
+            public DateTime DataInclusao { get; init; }
+            public DateTime? DataAlteracao { get; init; }
         }
     }
 }

@@ -6,7 +6,7 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.BloquearUsuario
 {
     public class ComandoBloquearUsuario : IRequest<RespostaBloquearUsuario>
     {
-        public long? Id { get; set; }
+        public long? Id { get; init; }
 
         public ValidationResult Validar()
         {

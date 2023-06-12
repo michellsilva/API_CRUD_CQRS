@@ -18,17 +18,17 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.InativarUsuario
 
         public Task<RespostaInativarTodosUsuario> Handle(ComandoInativarTodosUsuario comando, CancellationToken cancellationToken)
         {
-            var usuarios = _repositorioUsuario.ListarTodos().Where(x => x.Status != Usuario.Situacao.INATIVO);
+            var usuarios = _repositorioUsuario.Consultar(x => x.Status != Usuario.Situacao.INATIVO);
 
             if (!usuarios.Any())
             {
                 return Task.FromResult(RespostaInativarTodosUsuario.Invalido("Não existem usuários para inativar."));
             }
 
-            foreach (var item in usuarios)
+            Parallel.ForEach(usuarios, item =>
             {
                 item.Inativar();
-            }
+            });
 
             _repositorioUsuario.AtualizarLista(usuarios);
 

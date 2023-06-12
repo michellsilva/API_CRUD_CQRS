@@ -30,8 +30,8 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
                .NotNull().WithMessage("O 'E-mail' deve ser informado.")
                .NotEmpty().WithMessage("O 'E-mail' deve ser informado.")
                .MaximumLength(150).WithMessage("O 'E-mail' ultrapassou o limite máximo de caracteres.")
-               .EmailAddress().WithMessage("O 'E-mail' no formato inválido.");
-
+               .EmailAddress().WithMessage("O 'E-mail' esta no formato inválido.");
+            
             RuleFor(x => x.Senha!)
               .Cascade(CascadeMode.Stop)
               .NotNull().WithMessage("A 'Senha' deve ser informada.")

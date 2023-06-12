@@ -11,6 +11,8 @@ using AvaliacaoFC.Nucleo.Aplicacao.InativarUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.BloquearUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.BloquearsUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.InativarTodosUsuario;
+using AvaliacaoFC.Nucleo.Aplicacao.AcessarSistema;
+using AvaliacaoFC.Nucleo.Aplicacao.RecuperarSenhaUsuario;
 
 namespace AvaliacaoFC.Nucleo
 {
@@ -39,6 +41,12 @@ namespace AvaliacaoFC.Nucleo
 
             servicos.AddTransient<IValidator<ComandoAtivarUsuario>, ValidadorAtivarUsuario>();
             servicos.AddTransient<IRequestHandler<ComandoAtivarUsuario, RespostaAtivarUsuario>, ExecutorAtivarUsuario>();
+
+            servicos.AddTransient<IValidator<ComandoAcessarSistema>, ValidadorAcessarSistema>();
+            servicos.AddTransient<IRequestHandler<ComandoAcessarSistema, RespostaAcessarSistema>, ExecutorAcessarSistema>();
+
+            servicos.AddTransient<IValidator<ComandoRecuperarSenhaUsuario>, ValidadorRecuperarSenhaUsuario>();
+            servicos.AddTransient<IRequestHandler<ComandoRecuperarSenhaUsuario, RespostaRecuperarSenhaUsuario>, ExecutorRecuperarSenhaUsuario>();
 
             return servicos;
         }

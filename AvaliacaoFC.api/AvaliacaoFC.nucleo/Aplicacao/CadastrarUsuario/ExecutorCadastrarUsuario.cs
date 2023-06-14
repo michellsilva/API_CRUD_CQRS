@@ -1,14 +1,8 @@
-﻿using AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios;
-using AvaliacaoFC.Nucleo.Dominio;
+﻿using AvaliacaoFC.Nucleo.Dominio;
 using AvaliacaoFC.Nucleo.Infra.Repositorios;
+using AvaliacaoFC.Nucleo.Infra.Servicos;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static AvaliacaoFC.Nucleo.Dominio.Usuario;
 
 namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
 {
@@ -16,10 +10,12 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
     {
         private readonly ILogger<Usuario> _logger;
         private readonly IRepositorioUsuario _repositorioUsuario;
-        public ExecutorCadastrarUsuario(ILogger<Usuario> logger, IRepositorioUsuario repositorioUsuario)
+        private readonly IGeradorCriptografia _geradorCryptografia;
+        public ExecutorCadastrarUsuario(ILogger<Usuario> logger, IRepositorioUsuario repositorioUsuario, IGeradorCriptografia geradorCryptografia)
         {
             _logger = logger;
             _repositorioUsuario = repositorioUsuario;
+            _geradorCryptografia = geradorCryptografia;
         }
 
         public Task<RespostaCadastrarUsuario> Handle(ComandoCadastrarUsuario comando, CancellationToken cancellationToken)
@@ -32,7 +28,7 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario
             var usuario = new Usuario(
                 comando.Nome!,
                 comando.Login!,
-                comando.Senha!,
+                _geradorCryptografia.Criptografar(comando.Senha!),
                 comando.Email!,
                 comando.Telefone!,
                 comando.Cpf!,

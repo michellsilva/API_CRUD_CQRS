@@ -26,3 +26,5 @@ C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.pdb
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.genruntimeconfig.cache
 C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\ref\AvaliacaoFC.Nucleo.dll
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.csproj.GenerateResource.cache
+C:\Users\mjosep\Documents\Michel\Avaliacao_FC\AvaliacaoFC.api\AvaliacaoFC.nucleo\obj\Debug\net6.0\AvaliacaoFC.Nucleo.Aplicacao.Templates.resources

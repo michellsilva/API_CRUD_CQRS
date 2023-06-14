@@ -8,10 +8,12 @@ using AvaliacaoFC.Nucleo.Aplicacao.InativarUsuario;
 using AvaliacaoFC.Nucleo.Aplicacao.ListarUsuarios;
 using AvaliacaoFC.Nucleo.Dominio;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AvaliacaoFC.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UsuarioController : ControllerBase

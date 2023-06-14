@@ -4,6 +4,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AvaliacaoFC.Nucleo.Aplicacao.AcessarSistema;
 using AvaliacaoFC.Nucleo.Aplicacao.RecuperarSenhaUsuario;
+using AvaliacaoFC.Api.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace AvaliacaoFC.Api.Controllers
 {
@@ -19,7 +21,7 @@ namespace AvaliacaoFC.Api.Controllers
             _mediador = mediador;
         }
 
-        [HttpPost("Autenticar")]
+        [HttpPost("Login")]
         public async Task<IActionResult> Post([FromBody] ComandoAcessarSistema comando)
         {
             try
@@ -28,7 +30,9 @@ namespace AvaliacaoFC.Api.Controllers
 
                 if (resposta.Sucesso)
                 {
-                    return Ok(resposta);
+                    var token = GeradorToken.GenerateToken(new IdentityUser{ Id = resposta.Id.ToString() });
+
+                    return Ok(token);
                 }
                 else
                 {

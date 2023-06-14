@@ -49,6 +49,8 @@ namespace AvaliacaoFC.Nucleo
             servicos.AddTransient<IValidator<ComandoRecuperarSenhaUsuario>, ValidadorRecuperarSenhaUsuario>();
             servicos.AddTransient<IRequestHandler<ComandoRecuperarSenhaUsuario, RespostaRecuperarSenhaUsuario>, ExecutorRecuperarSenhaUsuario>();
 
+            servicos.AddTransient<IGeradorTemplate, GeradorTemplate>();
+            servicos.AddTransient<IGeradorCriptografia, GeradorCriptografia>();
             servicos.AddScoped<IGeradorEmail>(_ => new GeradorEmail(
                 configuracoes.GetValue<string>("configuracaoEmail:Provedor"),
                 configuracoes.GetValue<int>("configuracaoEmail:Porta"),

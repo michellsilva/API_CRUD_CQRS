@@ -1,5 +1,4 @@
-﻿using AvaliacaoFC.Nucleo.Aplicacao.AcessarSistema;
-using AvaliacaoFC.Nucleo.Dominio;
+﻿using AvaliacaoFC.Nucleo.Dominio;
 using AvaliacaoFC.Nucleo.Infra.Repositorios;
 using AvaliacaoFC.Nucleo.Infra.Servicos;
 using MediatR;
@@ -12,11 +11,17 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.RecuperarSenhaUsuario
         private readonly ILogger<Usuario> _logger;
         private readonly IRepositorioUsuario _repositorioUsuario;
         private readonly IGeradorEmail _geradorEmail;
-        public ExecutorRecuperarSenhaUsuario(ILogger<Usuario> logger, IRepositorioUsuario repositorioUsuario, IGeradorEmail geradorEmail)
+        private readonly IGeradorTemplate _GeradorTemplate;
+        private readonly IGeradorCriptografia _geradorCryptografia;
+
+        public ExecutorRecuperarSenhaUsuario(ILogger<Usuario> logger, IRepositorioUsuario repositorioUsuario,
+            IGeradorEmail geradorEmail, IGeradorTemplate geradorTemplate, IGeradorCriptografia geradorCryptografia)
         {
             _logger = logger;
             _repositorioUsuario = repositorioUsuario;
             _geradorEmail = geradorEmail;
+            _GeradorTemplate = geradorTemplate;
+            _geradorCryptografia = geradorCryptografia;
         }
 
         public Task<RespostaRecuperarSenhaUsuario> Handle(ComandoRecuperarSenhaUsuario comando, CancellationToken cancellationToken)
@@ -33,7 +38,9 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.RecuperarSenhaUsuario
                 return Task.FromResult(RespostaRecuperarSenhaUsuario.Invalido("'E-mail' não encontrado."));
             }
 
-            _geradorEmail.Enviar(new[] { usuario.Email }, "Recuperação de senha", $"sua senha é:{usuario.Senha}", null);
+            var template = _GeradorTemplate.GerarTemplate(new[] { _geradorCryptografia.Descriptografar(usuario.Senha) }, "RecuperarSenha");
+
+            _geradorEmail.Enviar(new[] { usuario.Email }, "Recuperação de senha", template, null);
 
             _logger.LogInformation("Usuário recuperou a senha com sucesso!");
 

@@ -1,4 +1,5 @@
-﻿using AvaliacaoFC.Nucleo.Dominio;
+﻿using AvaliacaoFC.Nucleo.Aplicacao.CadastrarUsuario;
+using AvaliacaoFC.Nucleo.Dominio;
 using AvaliacaoFC.Nucleo.Infra.Repositorios;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -27,6 +28,11 @@ namespace AvaliacaoFC.Nucleo.Aplicacao.AtualizarUsuario
             if (!comando.Validar().IsValid)
             {
                 return Task.FromResult(RespostaAtualizarUsuario.Invalido(comando.Validar().Errors.First().ErrorMessage));
+            }
+
+            if (_repositorioUsuario.UsuarioJaCadastrado(usuario))
+            {
+                return Task.FromResult(RespostaAtualizarUsuario.Invalido("Usuário já cadastro no sistema."));
             }
 
             usuario!.AtualizarDados(
